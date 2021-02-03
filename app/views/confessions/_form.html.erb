@@ -1,0 +1,29 @@
+<%= form_with model: @confession, local: true do |f| %>
+
+    <div class="errors-container">
+        <p>
+            <% if @confession.errors.any? %>
+                <ul>    
+                    <% @confession.errors.full_messages.each do |message| %>
+                        <li> <%= message %> </li>
+                    <% end %>
+                </ul>
+            <% end %>
+        </p>
+    </div>
+
+    <p>
+        Subject<br>
+        <%= f.text_field :name %>
+    </p>
+
+    <p>
+        Your Confession<br>
+        <%= f.text_area :body, :cols => 40, :rows => 8 %>
+    </p>
+
+    <p>
+        <%= f.submit %>
+    </p>
+
+<% end %>

@@ -1,0 +1,19 @@
+<div class="title-area">
+    <h6> Confession #<%= @confession.id %></h6>
+    <h1><%= @confession.name %></h1>
+</div>
+
+<div class="container">
+    <div class="confession-body">
+    <p><%= @confession.body %></p>
+    </div>
+</div>
+<%= link_to "Edit", confessions_edit_path(@confession) %>
+<%= link_to "Delete", @confession,
+              method: :delete,
+              data: { confirm: "Are you sure you want to delete this confession? This action cannot be reversed." } %>
+
+<%= link_to 'Confess Now', confessions_new_path %>
+<%= link_to 'Back to All Confessions', confessions_path %>
+
+

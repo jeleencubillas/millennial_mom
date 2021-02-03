@@ -1,0 +1,20 @@
+<div class="title-area">
+    <h1>Confessions</h1>
+    <%= link_to 'Confess Now', confessions_new_path %>
+</div>
+
+<div class="container">
+    <% @confessions.each do |confession| %>
+        <div class="confession">
+        <h2><%= link_to confession.name, confession %></h2>
+        <p><%= confession.body %></p>
+        <a href="/confessions/<%= confession.id %>">View</a>
+        <a href="/confessions/<%= confession.id %>/edit">Edit</a>
+        <%= link_to "Delete", confession,
+              method: :delete,
+              data: { confirm: "Are you sure you want to delete this confession? This action cannot be reversed." } %>
+        </div>
+    <% end %>
+</div>
+
+
