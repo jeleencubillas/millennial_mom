@@ -404,3 +404,10 @@ nav ul li:not(:last-child) {
     padding: 25px 0;
     text-align: center;
 }
+
+.footer-text i {
+    display: inline-block;
+    margin: 0 3px;
+    color: var(--salmon);
+    font-size: 14px;
+}
