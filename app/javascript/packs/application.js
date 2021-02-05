@@ -13,11 +13,11 @@ Turbolinks.start()
 ActiveStorage.start()
 
 // Shrink Header on Scroll
-const header = document.getElementById("header-container");
+const header = document.getElementById("header");
 const logo = document.getElementById("logo-img");
 
 window.onscroll = function() {
-    if (document.body.scrollTop > 80) {
+    if (document.body.scrollTop > 30) {
         header.classList.add("sticky");
         logo.style.width = "32px";
   } else {
@@ -25,3 +25,5 @@ window.onscroll = function() {
         logo.style.width = "42px";
   }
 }
+
+console.log("It's working");

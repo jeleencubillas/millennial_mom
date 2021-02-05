@@ -3,11 +3,16 @@
 </div>
 
 <div class="container">
+    <% flash.each do |type, msg| %>
+        <div class="flash-container">
+            <p><%= msg %></p>
+        </div>
+    <% end %>
     <% @confessions.each do |confession| %>
         <div class="confession">
             <div class="confession-text">
                 <h3><%= link_to confession.name, confession %></h3>
-                <p><%= confession.body %></p>
+                <p><%= truncate( confession.body, length: 60, omission: '...' ) %></p>
                 <p class="small"><%= time_ago_in_words(confession.created_at) %> ago</p>
             </div>
             <a href="/confessions/<%= confession.id %>"><i class="lni lni-eye"></i>&emsp;View</a>

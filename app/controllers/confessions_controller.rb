@@ -13,7 +13,7 @@ class ConfessionsController < ApplicationController
     # @confession.body = params[:body]
 
     if @confession.save
-      redirect_to confessions_path
+      redirect_to confessions_path, notice: "New confession posted"
     else
       render :new
     end
@@ -32,7 +32,7 @@ class ConfessionsController < ApplicationController
     @confession = Confession.find(params[:id])
 
     if @confession.update(confession_params)
-      redirect_to @confession
+      redirect_to @confession, notice: "Confession updated"
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class ConfessionsController < ApplicationController
     @confession = Confession.find(params[:id])
     @confession.destroy
 
-    redirect_to confessions_path
+    redirect_to confessions_path, notice: "Confession deleted"
   end
 
   private

@@ -4,6 +4,11 @@
 </div>
 
 <div class="container">
+    <% flash.each do |type, msg| %>
+        <div class="flash-container">
+            <p><%= msg %></p>
+        </div>
+    <% end %>
     <div class="confession-body">
     <p class="big"><%= @confession.body %></p>
     <p class="centered low-contrast">Posted <%= time_ago_in_words(@confession.created_at) %> ago</p>
