@@ -13,17 +13,17 @@
     </div>
 
     <p>
-        Subject<br>
-        <%= f.text_field :name %>
+        <label>Subject</label><br>
+        <%= f.text_field :name, :placeholder => "$#*&!!" %>
     </p>
 
     <p>
-        Your Confession<br>
-        <%= f.text_area :body, :cols => 40, :rows => 8 %>
+        <label>Your Confession</label><br>
+        <%= f.text_area :body, :cols => 50, :rows => 8, :placeholder => "What's on your mind, Momma?" %>
     </p>
 
     <p>
-        <%= f.submit %>
+        <%= f.submit class: "button button-solid" %>
     </p>
 
 <% end %>

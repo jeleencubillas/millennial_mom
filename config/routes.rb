@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  get "/pages/:page" => "pages#show"
+
   get '/confessions' => 'confessions#index'
   get '/confessions/new' => 'confessions#new'
   post '/confessions' => 'confessions#create', as: 'confessions_create'

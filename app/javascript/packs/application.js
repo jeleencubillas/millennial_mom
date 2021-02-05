@@ -11,3 +11,17 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// Shrink Header on Scroll
+const header = document.getElementById("header-container");
+const logo = document.getElementById("logo-img");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 80) {
+        header.classList.add("sticky");
+        logo.style.width = "32px";
+  } else {
+        header.classList.remove("sticky");
+        logo.style.width = "42px";
+  }
+}

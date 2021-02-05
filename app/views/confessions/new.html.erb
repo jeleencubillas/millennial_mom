@@ -1,7 +1,10 @@
 <div class="title-area">
     <h1>Submit a Confession</h1>
-    <%= link_to 'Back to All Confessions', confessions_path %>
 </div>
+
+<p class="centered">
+    Don’t worry, your secret’s safe with us. The Confessional is completely anonymous. See the <%= link_to 'Confessional Rules', "/pages/rules" %>.
+</p>
 
 <div class="container">
     <%= render "form", confession: @confession %>

@@ -1,0 +1,19 @@
+<div id="header">
+    <a href="/confessions">
+        <div id="header-container">
+            <div class="logo-container">
+            <%= image_tag ("favicon.png"), id: "logo-img" %>
+                <h5>millennial_mom</h5>
+        </div>
+    </a>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                <li><%= link_to 'Rules', "/pages/rules", class: "low-contrast" %></li>
+                <li><%= link_to 'All Confessions', confessions_path, class: "low-contrast" %></li>
+                <li><%= link_to 'Confess Now', confessions_new_path, class: "low-contrast" %></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
