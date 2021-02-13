@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  
-  get "/pages/:page" => "pages#show"
+  root 'confessions#index'
 
   get '/confessions' => 'confessions#index'
   get '/confessions/new' => 'confessions#new'
@@ -10,5 +9,7 @@ Rails.application.routes.draw do
   patch '/confessions/:id' => 'confessions#update'
   delete '/confessions/:id' => 'confessions#destroy'
   
+  get "/pages/:page" => "pages#show"
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
